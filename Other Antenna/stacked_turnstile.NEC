@@ -1,0 +1,19 @@
+CM 
+CE
+SY lambda= 13.94383526
+SY dia = 0.01	'note - the distance between the two perpendicular dipoles  is influenced by this
+SY len = 0.46 * lambda
+GW	1	11	0	-len/2	0	0	len/2	0	dia/2
+GW	2	11	-len/2	0	0.01	len/2	0	0.01	dia/2
+GW	3	11	0	-len/2	lambda/4	0	len/2	lambda/4	dia/2
+GW	4	11	-len/2	0	0.01 + lambda/4	len/2	0	0.01 + lambda/4	dia/2
+GE	0
+GN	-1
+EK
+EX	0	1	6	0	1	0	0
+EX	0	2	6	0	6.12e-17	1	0
+EX	0	3	6	0	1	0	0
+EX	0	4	6	0	6.12e-17	1	0
+
+FR	0	0	0	0	22	0
+EN
