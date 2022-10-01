@@ -1,0 +1,19 @@
+CM Example 2 :	Loaded dipole in free space
+CM 		See GetStarted.txt
+CM 
+CM 
+CM 
+CM 
+CM forw: 80, 0 ; back:-80, 0
+CE
+SY len=0.469419, hght=1.5	'Symbol: Length for WL/2
+GW	hght	9	0	-len/2	hght	0	len/2	1	#3	'Wire 1, 9 segments, halve wavelength long.
+GE	-1
+LD	5	1	0	0	58000000	'Wire conductivity
+GN	2	0	0	0	13	0.005
+EK
+EX	0	1	5	0	1	0	0	'Voltage source (1+j0) at wire 1 segment 5.
+FR,0,1,0,0,300
+PQ -1
+PT -1
+RP,0,37,1,1000,-90,0,5
